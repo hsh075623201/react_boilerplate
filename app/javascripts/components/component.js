@@ -1,7 +1,7 @@
 // 组建模块
 var React = require('react')
 var component = React.createClass({
-	render(){
+	render() {
 		return <div>component</div>
 	}
 })

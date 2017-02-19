@@ -1,0 +1,280 @@
+@charset "utf-8";
+*{margin:0;padding:0;}
+body{color:#656565;margin:0 auto;font-size:12px;line-height:24px;font-family:"宋体";-webkit-text-size-adjust:none;background:#fff;}
+ol,ul,li{list-style:none;}
+img{border:none; vertical-align:top;}
+a{color:#656565;text-decoration:none;outline:none;}
+button,input,select,textarea{font-size:100%;font-family:tahoma;margin:0;outline:0 none;vertical-align:baseline;*vertical-align:middle;}
+a:hover{color:#f00;}
+.left{float:left;}
+.right{float:right;}
+.clearfix:before,.clearfix:after{content:''; display:table;}
+.clearfix:after{clear:both;}
+.clearfix{*zoom:1;}
+.clr{font-size:0;line-height:0px; height:15px; clear:both;}
+.text{display:block;text-align:center;}
+.none{ display:none;}
+em,i{font-style:normal;}
+.center{text-align:center;display:block;}
+.red{color:#f00;}
+.show{display:block;}
+
+
+#continer{width:1002px; margin:0 auto;}
+header{}
+.top_txt,.submenu{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/top_bg.gif) repeat-x; height:36px; line-height:36px;}
+.top_txt_right{float:right;}
+.top_search{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/search_bg.gif) no-repeat;width:217px;height:25px;line-height:25px;float:left;margin:6px 42px 0 0;}
+.top_search_inp,.top_search_btn{background:none;border:none;float:left;width:180px;height:25px;line-height:25px;text-indent:20px;}
+.top_search_btn{ text-indent:0; width:36px; cursor:pointer;}
+.top{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/top_pic.jpg) no-repeat top center; height:179px;}
+.top #continer{height:134px; padding:45px 0 0 674px;width:328px;}
+/*导航*/
+nav{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/nav_bg.gif) repeat-x; height:81px; font-size:14px;}
+
+
+.menu{z-index:300;clear:both;position:absolute;/*top:215px;*/height:45px;width:1130px; overflow:hidden;}
+.menu li{float:left;text-align:center;float:left;font-family:"微软雅黑"; height:46px; line-height:46px; position:relative;background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/nav_line.gif) no-repeat left center}
+.menu li#m1{background:none;}
+.menu li a{width:110px;text-align:center;display:block;color:#fff;background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/nav_line.gif) no-repeat left center;}
+.menu .active A{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/nav_current.gif) no-repeat;color:#fff;width:108px; height:50px;line-height:50px;margin-top:-4px;}
+.menu .active A:visited{}
+.menu .normal A{text-decoration: none; background:none;}
+.menu .normal A:link{color:#fff;text-decoration: none; background:none;}
+.menu .normal A:visited{color:#fff;text-decoration: none; background:none;}
+.menu .normal A:hover{}
+.submenu{float:left;overflow:hidden;font-size:12px;position:absolute; border-top:none;  height:31px; line-height:31px; top:261px;z-index:50; white-space:nowrap;width:1002px;}
+.submenu a{ padding-right:25px;background:none;  }
+.submenu a:hover{color:#1b92da;}
+.submenu ul{display:none;position:relative; margin-top:5px;}
+#s2{ margin-left:130px; }
+#s3{ margin-left:127px;}
+#s4{margin-left:380px; }
+#s5{margin-left:500px;}
+#s6{margin-left:630px;}
+#s7{margin-left:750px;}
+#s8{margin-left:705px;}
+#s9{margin-left:885px;}
+
+/* 图片banner */
+.tu_ban{float:left; margin-right:14px;width:625px;height:327px;overflow:hidden;}
+.picBtnTop{ width:625px; height:327px;position:relative;overflow:hidden;zoom:1; }
+.picBtnTop .hd{ width:120px;  height:79px; position:absolute;right:5px;}
+.picBtnTop .hd ul li{ width:120px;text-align:center; line-height:0px;  }
+.picBtnTop .hd ul li img{ width:120px; height:79px; border:2px solid #fff; cursor:pointer;  }
+.picBtnTop .hd ul li.on img{border:2px solid #fcc403;}
+.picBtnTop .bd{width:496px;  height:327px; position:relative;  }
+.picBtnTop .bd img{ width:496px; height:327px;  }
+.picBtnTop .bd li{ position:relative; zoom:1; }
+.picBtnTop .bd li .pic{ position:relative; z-index:0; line-height:0px;  }
+.picBtnTop .bd li .bg{ width:496px; height:36px; position:absolute; left:0; bottom:0; z-index:1;  background:#000; filter:alpha(opacity=51);opacity:0.51;}
+.picBtnTop .bd li .title{width:486px;height:36px;line-height:36px;left:0;bottom:0;position:absolute;z-index:2;text-indent:15px; }
+.picBtnTop .bd li .title a{ color:#fff;  }
+.picBtnTop .bd li .title span{float:right;color:#fff; }
+
+
+/* 新闻动态 */
+.xwdt{float:left; width:363px;}
+.xwdt_cont{border:1px solid #cacaca;border-top:none; height:289px; padding:0 15px;}
+.xwdt_cont h3,.tzgg .sy_news_cont h3,.zcqx .sy_news_cont h3{ font-size:14px; text-align:center; padding-top:11px; line-height:30px;}
+.xwdt_cont h3 a,.tzgg .sy_news_cont h3 a,.zcqx .sy_news_cont h3 a{color:#2491e5; }
+.xwdt_cont p,.tzgg .sy_news_cont p{height:60px; border-bottom:1px dashed #c0c0c0;}
+.xwdt_cont ul,.tzgg .sy_news_cont ul,.zcqx .sy_news_cont ul{ padding-top:12px; clear:both;}
+.xwdt_cont ul li,.tzgg .sy_news_cont li,.zcqx .sy_news_cont li{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sy_icon1.gif) no-repeat left center;line-height:33px;padding-left:14px;}
+.xwdt_cont ul li span,.tzgg .sy_news_cont li span,.zcqx .sy_news_cont li span{color:#9e9d9d; float:right;}
+
+.sy_h2{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sy_h_bg.gif) repeat-x; height:36px; line-height:36px; font-family:"微软雅黑"; font-size:14px; color:#656565; font-weight:normal;}
+.sy_h2 a{float:right;}
+.sy_h2 em{width:36px; height:36px; padding-right:12px;display:block; float:left; text-transform:uppercase;}
+.sy_h2 i{font-size:12px; padding-left:8px;}
+.sy_news_cont{ border:1px solid #cacaca; border-top:none;}
+
+/*通知公告*/
+.tzgg,.zczl{width:271px; float:left;}
+.tzgg h2 em{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sy_h_icon1.gif) no-repeat;}
+.tzgg .sy_news_cont,.zcqx .sy_news_cont{height:289px; padding:0 15px;}
+.tzgg .sy_news_cont h3,.zcqx .sy_news_cont h3{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sy_icon2.gif) no-repeat left 23px;text-align:left; font-size:12px;text-indent:14px;}
+
+/*仲裁气象*/
+.zcqx,.zctk{float:left; width:402px; margin:0 10px;}
+.zcqx h2 em{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sy_h_icon2.gif) no-repeat;}
+.zcqx dl{padding-top:15px;height:86px;border-bottom:1px dashed #c0c0c0;}
+.zcqx dt{float:left; margin-right:14px;}
+.zcqx dt img{ width:105px; height:71px;}
+.zcqx dd{float:left; width:240px;}
+.zcqx .sy_news_cont dd h3{padding:0;background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sy_icon2.gif) no-repeat left center; line-height:27px;}
+
+/*仲裁指南*/
+.zczn,.jgfw{ float:left; width:309px;}
+.zczn h2 em{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sy_h_icon3.gif) no-repeat;}
+.zczn .sy_news_cont{height:267px; padding:22px 0 0 12px;}
+.zczn ul li{ float:left; background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/zczn_menu_bg.gif) repeat-x; height:102px; width:89px; text-align:center; padding-top:14px; margin:0 6px 8px 0;}
+.zczn ul li a{color:#edecec; line-height:40px;}.zczn ul li span{display:block;}
+
+.ad{ width:1002px; height:91px; margin-bottom:15px;}
+/* 单个图片幻灯片盒子 - 公用类 */
+.slideBox{  width:1002px; height:91px; overflow:hidden; position:relative;}
+.slideBox .hd{ height:15px; overflow:hidden; position:absolute; right:8px; bottom:8px; z-index:1; display:none; }
+.slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+.slideBox .hd ul li{float:left;margin-right:5px;width:15px;height:15px;line-height:14px;text-align:center;background:#fff;cursor:pointer; }
+.slideBox .hd ul li.on{ background:#1a6ffe; color:#fff; }
+.slideBox .bd{ position:relative; height:100%; z-index:0; }
+.slideBox .bd img{ width:1002px; height:91px;}
+
+/*制裁资料*/
+.zczl h2 em{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sy_h_icon4.gif) no-repeat;}
+.zczl .sy_news_cont,.zctk .sy_news_cont,.jgfw .sy_news_cont{height:200px;}
+.zczl ul{padding:15px 0 0 9px;}
+.zczl ul li{float:left; position:relative; margin:5px 6px 0 0;}
+.zczl ul li img{ width:123px; height:81px;}
+.zczl ul li .bg{ width:123px; height:28px; position:absolute; left:0; bottom:0; z-index:1;  background:#000; filter:alpha(opacity=61);opacity:0.61;}
+.zczl ul li .title{width:123px;height:28px;line-height:28px;left:0;bottom:0;position:absolute;z-index:2; text-align:center; font-family:"微软雅黑"; font-size:14px;}
+.zczl ul li .title a{ color:#fff;  }
+.zczl ul li .title span{float:right;color:#fff; }
+
+/*仲裁条款*/
+.zctk{}
+.zctk h2 em{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sy_h_icon5.gif) no-repeat;}
+.sy_news_cont_bg{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/clause_cont_bg.gif) no-repeat top; width:239px; height:128px; margin:0 0 0 16px; line-height:26px; padding:55px 109px 0 19px; text-indent:24px;}
+
+/*机构服务*/
+.jgfw{}
+.jgfw h2 em{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sy_h_icon6.gif) no-repeat;}
+.jgfw ul{padding:19px 0 0 12px;}
+.jgfw li{margin-bottom:12px;}
+
+/*友情链接*/
+.link{}
+.slideTxtBox{ width:1000px; border:1px solid #cacaca; text-align:left; height:127px;}
+.slideTxtBox .hd{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/link_h.gif) repeat-x; height:37px; line-height:37px;position:relative; font-family:"微软雅黑"; font-size:14px;}
+.slideTxtBox .hd ul{ float:left; position:absolute; left:6px; top:0px; height:37px;}
+.slideTxtBox .hd ul li{ float:left; padding:0 20px; background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/link_line.gif) no-repeat right;}
+.slideTxtBox .hd ul li.on{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/link_qh_bg.gif) repeat-x;cursor:pointer; margin-left:-6px;}
+.slideTxtBox .hd ul li.on a{color:#fff;}
+.slideTxtBox .bd{ padding:15px;  }
+.slideTxtBox .bd ul{ padding:10px;  }
+.slideTxtBox .tempWrap{ margin:15px;  }
+
+footer{background:#e9e8e8 url(http://www.whac.org.cn/wcs/Tpl/home/default/images/footer_bg.gif) repeat-x top; line-height:30px; padding:35px 0 23px 0; text-align:center;}
+footer em{font-family:"微软雅黑";}
+
+
+/*内页左侧*/
+.sidebar{float:left; width:200px;}
+.sadenav{}
+.sadenav h2{ width:198px; height:63px; line-height:63px; background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sade_h.gif) no-repeat; font-family:"微软雅黑"; font-size:20px; color:#fff; text-indent:24px; font-weight:normal;}
+.sadenav h2 span{font-size:12px;}
+.sadenav ul{border-top:none; width:196px;border:1px solid #e8e8e8; -moz-box-shadow:0 5px 5px rgba(0,0,0,0.16) ; -webkit-box-shadow:0 5px 5px rgba(0,0,0,0.16);box-shadow:0 5px 5px rgba(0,0,0,0.16); padding:18px 0;}
+.sadenav li a{display:block; background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sade_li_01.gif) no-repeat; width:196px; height:22px; line-height:22px; padding:0 0 15px 0; text-indent:45px;}
+.sadenav li a:hover,.sadenav li a.sade_current{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sade_li_02.gif) no-repeat top left; width:208px; padding:5px 0 8px 0; height:36px; line-height:36px; margin:-12px 0 0 -1px; color:#fff;}
+.sadenav li ul{border:none;box-shadow:0 0 0; padding:0 0 20px 0; margin:0 10px; width:170px;}
+.sadenav li ul li a{background:none; border-bottom:1px dashed #ccc;width:170px; height:28px; padding:0; margin:0; line-height:28px;}
+.sadenav li ul li a:hover{background:none;width:170px; height:28px; margin:0; padding:0; line-height:28px; color:#03F;}
+
+.sadelxwm{margin-top:35px;-moz-box-shadow:0 5px 5px rgba(0,0,0,0.16) ; -webkit-box-shadow:0 0 5px rgba(0,0,0,0.16);box-shadow:0 0 5px rgba(0,0,0,0.16) ; background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/ny_sade_contact.gif); width:198px; height:180px; position:relative;}
+.sadelxwm em{position:absolute; background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sade_lxwm_pic.gif) no-repeat; width:91px; height:96px;top:-25px; right:16px;}
+
+/*内页右侧*/
+.ny_detail{ float:left; margin-left:28px; width:773px; overflow:hidden;}
+.sitenav{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/site_bg.gif) repeat-x; height:36px; line-height:36px;}
+.sitenav em{float:right; padding-right:22px;}
+.sitenav span{display:block; background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/site_icon.gif) no-repeat left center; font-family:"微软雅黑"; font-size:14px; color:#656565; margin-left:12px; padding-left:21px;}
+.sitenav span i{font-size:12px; padding-left:10px;}
+.ny_cont{padding:20px 10px; height:auto !important; min-height:600px; height:600px;}
+
+/*关于*/
+.about_cont{font-size:14px; line-height:32px;}
+
+
+/*新闻*/
+.news_cont dl{ height:130px; border-bottom:1px dashed #dfdfdf; padding-top:10px;}
+.news_cont dt{float:left; width:158px; margin-right:23px;}
+.news_cont dt img{ width:150px; height:101px; border:1px solid #d6d6d6; padding:3px;}
+.news_cont dd{width:558px; float:left;}
+.news_cont dd h3{font-size:14px; line-height:28px;}
+.news_cont dd p{line-height:22px; text-indent:24px;}
+.news_cont dd p a{text-align:right; font-weight:bold; display:block}
+.news_ul{clear:both; line-height:32px; padding:24px 0;}
+.news_ul li{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/sy_icon1.gif) no-repeat left center; padding-left:15px;}
+.news_ul li span{float:right;}
+
+.pagesize{clear:both; padding:20px 0;}
+
+/*-------- 详细页面样式-----*/
+.show_cont{clear:both; font-size:14px; line-height:30px;}
+.show_cont h2{text-align:center;;font-size:14px; color:#666;line-height:50px;}
+.ly{text-align:center;margin:0 25px 15px 25px; color:#6f6f6f;border-bottom:1px dashed #d0d0d0; font-size:12px;}
+
+.show-n-p{clear:both; padding:20px 0; border-top:1px solid #e4e4e4; margin-top:30px;}
+
+
+/*联系我们*/
+.contact_div{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/contact_bg.jpg) no-repeat top right; height:258px; padding:24px 0 0 18px;}
+.contact_table{margin:40px 0 0 24px;}
+.contact_table td{padding-bottom:5px;}
+.contact_table_inp{width:651px; height:28px; border:1px solid #bdbdbd; line-height:28px;}
+.contact_table_code{width:200px; height:28px; border:1px solid #bdbdbd; line-height:28px;}
+.contact_table_btn{ width:154px; height:38px; line-height:38px; text-align:center; color:#fff; font-size:14px; background:#1488d6; border:none;}
+
+
+
+
+/*相册*/
+.ny_box{overflow:hidden; width:1002px;}
+.ny_cont{ padding:30px 0 60px 0; height:auto !important; min-height:500px; height:500px;}
+.ny_cont input{border-left:0px;border-top:0px;border-right:0px;border-bottom:1px ; border:1px solid #999; line-height:22px;}
+.ny_cont textarea{overflow:auto; background-attachment:   fixed;   background-repeat:   no-repeat;   border-style:   solid; border-color:   #FFFFFF;}
+
+
+.menuc_nTab{float:left;margin:0 10px; width:720px;}
+.menuc_nTab .TabTitle{height:35px; line-height:35px; border-bottom:2px solid #d6d6d6; border-top:2px solid #d6d6d6;}
+.menuc_nTab .TabTitle ul{ border:0; margin:0;padding:0; font-family:"微软雅黑";}
+.menuc_nTab .TabTitle li{float: left;width:80px;cursor: pointer; font-weight:600; padding-left:20px;}
+.menuc_nTab .TabTitle .active{text-align:center;font-size:15px; COLOR: #1b75e4;font-weight:600;}
+.menuc_nTab .TabTitle .normal{text-align:center;font-size:14px;color:#666;}
+
+.menuc_nTab .TabContent{clear:both;width:100%;}
+
+.btl{width:98%;clear:both;margin:15px 0;}
+.btl dd {clear:both;padding:3px 0 3px 0;}
+/*留言板添加界面标题*/
+.btl em {width:100px;display:block;font-style:normal; font-size: 12px;text-align:right;line-height:20px;vertical-align:top;padding:4px 20px 4px 0;float:left;}
+.btl input{ width:252px; height:25px; border:1px solid #d3d3d3; background:none; }
+.btl p {display:block;float:left;}
+.btl p small {text-align:left; display:block;font-size:12px;}
+.btl .red{ color:#f80000;}
+.btl .bti2{width:580px; height:165px; border:1px solid #d3d3d3;}
+.btl input.bti3{width: 154px;height: 38px;line-height: 38px;text-align: center;color: #fff;font-size: 14px;background: #1488d6;border: none;}
+
+.message_cont .lyxx{font-size:12px; padding:10px;}		
+.message_cont .lyxx .title{ padding:10px 0; height:20px;width: 100%; float: left; overflow: hidden; border-bottom:1px dashed #ccc;}
+.message_cont .lyxx .title LI{padding-bottom: 0px;   line-height: 20px;    padding-left: 20px;   padding-right: 20px;    white-space: nowrap;  background: url(http://www.whac.org.cn/wcs/Tpl/home/default/images/mes-icon-01.gif) no-repeat 0px 2px;   float: left;   height: 20px;   padding-top: 0px;}
+.message_cont .lyxx .title .person{ background: url(http://www.whac.org.cn/wcs/Tpl/home/default/images/pic-lyr.gif) no-repeat 0px 0px;}
+.message_cont .lyxx .title .sex{background: url(http://www.whac.org.cn/wcs/Tpl/home/default/images/pic-xb.gif) no-repeat 0px 0px;}
+.message_cont .lyxx .title .time{background: url(http://www.whac.org.cn/wcs/Tpl/home/default/images/pic-time.gif) no-repeat 0px 0px;}
+.message_cont .lyxx .title .mail{background: url(http://www.whac.org.cn/wcs/Tpl/home/default/images/pic-mail.gif) no-repeat 0px 0px;}
+.message_cont .lyxx .title .company{background: url(http://www.whac.org.cn/wcs/Tpl/home/default/images/pic-gsmc.gif) no-repeat 0px 0px;}
+.message_cont .lyxx .title .web{background: url(http://www.whac.org.cn/wcs/Tpl/home/default/images/pic-web.gif) no-repeat 0px 0px;}
+.message_cont .lyxx .title .area{background: url(http://www.whac.org.cn/wcs/Tpl/home/default/images/pic-dq.gif) no-repeat 0px 0px;}
+.message_cont .lyxx .title .tel{background: url(http://www.whac.org.cn/wcs/Tpl/home/default/images/pic-tel.gif) no-repeat 0px 0px;}
+.message_cont .lyxx .title .phone{ackground: url(http://www.whac.org.cn/wcs/Tpl/home/default/images/pic-phone.gif) no-repeat 0px 0px;}
+.message_cont .lyxx .title .addres{background: url(http://www.whac.org.cn/wcs/Tpl/home/default/images/pic-lxdz.gif) no-repeat 0px 0px;}
+.message_cont .lyxx .title .reply{background: url(http://www.whac.org.cn/wcs/Tpl/home/default/images/pic-reply.gif) no-repeat 0px 0px;}
+.message_cont .lyxx .title .ip{background: url(http://www.whac.org.cn/wcs/Tpl/home/default/images/pic-gsmc.gif) no-repeat 0px 0px;}
+.message_cont .lyxx .title SPAN{  color: #666;}
+.message_cont .lyxx .list{width: 99%; margin:0 0 5px 0;clear: both; overflow: hidden;}
+.message_cont .lyxx .list LI{line-height: 20px; padding:0 0 0 5px;}
+.message_cont .lyxx .list LI SPAN{ color: #666;}
+.message_cont .lyxx .list .li-head{ background: #d7d7d7; height: 25px;padding-top: 5px;}
+.message_cont .lyxx .list .li-title{  background: #c0c0c0; padding-top: 5px;}
+.message_cont .lyxx .list .li-con{width: 100%;float: left;overflow: hidden;padding:12px 0 5px 5px;*padding:0px 0 5px 5px;}
+.message_cont .lyxx .list .li-con .pic{  width: 35px;   float: left;}
+.message_cont .lyxx .list .li-con .info{   width: 100%;    float: left;    color:#1b8ab9;}
+.message_cont .lyxx .list .li-bottom{ padding:0 25px 20px 5px;border-bottom:#ccc solid 1px;}
+
+.foucetext{ font-style: normal;  color: #f08300;}
+
+
+.video_ul li{background:url(http://www.whac.org.cn/wcs/Tpl/home/default/images/ygfc_pic_bg.gif) no-repeat; width:234px; height:196px; text-align:center; line-height:46px; font-size:14px; overflow:hidden; float:left; margin:12px 8px 0 !important;margin:12px 7px 0;}
+.video_ul li a{width:215px; padding-left:9px; height:149px; display:block; text-align:center; overflow:hidden; color:#333;}
+.video_ul li img{ text-align:center;height:142px; padding-top:8px;}

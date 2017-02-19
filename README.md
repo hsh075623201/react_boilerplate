@@ -1,3 +1,3 @@
-# react_boilerplatenpm start
-
-npm run dev
+# react_boilerplate
+npm start #build
+npm run dev #run
