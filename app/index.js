@@ -1,59 +1,54 @@
 import React from 'react'
 import {
-  render
-} from 'react-dom'
-import {
   Router,
   Route,
-  IndexRoute,
   Link,
-  IndexLink
+  browserHistory
 } from 'react-router'
+import ReactDOM from 'react-dom'
+import Message from './javascripts/components/component.js'
 
-
-
-{ /**  {this.props.children}   非常重要**/ } { /** 思考：首页也有其他分路由，怎么配**/ }
-
-// declare our routes and their hierarchy
-
-var About = React.createClass({
-  render: function() {
-    return <h2>about</h2>;
-  }
-});
-
-var Home = React.createClass({
-  render: function() {
-    return <h2>Home</h2>;
-  }
-});
-
-
-var App = React.createClass({
+const App = React.createClass({
   render() {
     return (
-
-      <div className="mp_wrap bui_wrap">
-      {/**主屏幕**/}
-      <div className="mp_pagebox_home">
-        
-        {/**这里面的内容会被子路由给代替**/}
+      <div>
+        <h1>App</h1>
+        <ul>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/inbox">Inbox</Link></li>
+        </ul>
         {this.props.children}
-
-        {/**公共页脚**/}
-        <div className="mp_page_footer">
-           <Footer  />
-        </div>
-        {/**公共页脚**/}
       </div>
-      {/**主屏幕**/}
-    </div>
     )
   }
-});
-render((
-  <Router>
-    <Route path="/" handler={App}>
-    
+})
+
+const About = React.createClass({
+  render() {
+    return <h3>About</h3>
+  }
+})
+
+const Inbox = React.createClass({
+  render() {
+    return (
+      <div>
+        <h2>Inbox</h2>
+        {this.props.children || "Welcome to your Inbox"}
+      </div>
+    )
+  }
+})
+
+
+
+ReactDOM.render((
+  <Router history={ browserHistory }>
+    <Route path="/" component={App}>
+      <Route path="about" component={About} />
+      <Route path="inbox" component={Inbox}>
+        <Route path="messages/:id" component={Message} />
+      </Route>
     </Route>
-  </Router>), document.getElementById('content'))
+  </Router>
+), document.getElementById("content"))
