@@ -6,7 +6,10 @@ import {
   browserHistory
 } from 'react-router'
 import ReactDOM from 'react-dom'
-import Message from './javascripts/components/component.js'
+import {
+  Message,
+  About
+} from './javascripts/components/component.js'
 
 const App = React.createClass({
   render() {
@@ -23,11 +26,7 @@ const App = React.createClass({
   }
 })
 
-const About = React.createClass({
-  render() {
-    return <h3>About</h3>
-  }
-})
+
 
 const Inbox = React.createClass({
   render() {

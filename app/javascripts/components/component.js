@@ -2,13 +2,19 @@
 import React from 'react'
 import fetch from 'node-fetch';
 
-const Message = React.createClass({
-	getInitialState: function() {
+export class Message extends React.Component {
+	/*getInitialState() {
 		return {
 			value: "zsd",
 		};
-	},
-	componentDidMount: function() {
+	}*/
+	constructor(props) {
+		super(props);
+		this.state = {
+			value: "zsd",
+		};
+	}
+	componentDidMount() {
 		/*$.get(this.props.source, function(result) {
 		  var lastGist = result[0];
 		  if (this.isMounted()) {
@@ -22,8 +28,8 @@ const Message = React.createClass({
 			"attr": "url"
 		})
 
-	},
-	getData: function(obj) {
+	}
+	getData(obj) {
 		fetch('https://api.github.com/users/github')
 			.then(res => res.json())
 			.then(json => {
@@ -33,15 +39,27 @@ const Message = React.createClass({
 				})
 
 			});
-	},
-	handleClick: function(event) {
+	}
+	handleClick(event) {
 		this.getData({
 			"attr": "html_url"
 		})
-	},
-	render() {
-		return <h3>Message {this.props.params.id} <span onClick={this.handleClick}>{this.state.value}</span></h3>
 	}
-})
+	render() {
+		return <h3>Message {this.props.params.id} <span onClick={this.handleClick.bind(this)}>{this.state.value}</span></h3>
+	}
+}
 
-export default Message
+export class About extends React.Component {
+	constructor(props) {
+		super(props)
+	}
+	render() {
+		return <h3>About</h3>
+	}
+}
+
+
+
+// export default Message
+// export class About
