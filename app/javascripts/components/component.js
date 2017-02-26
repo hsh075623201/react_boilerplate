@@ -3,11 +3,6 @@ import React from 'react'
 import fetch from 'node-fetch';
 
 export class Message extends React.Component {
-	/*getInitialState() {
-		return {
-			value: "zsd",
-		};
-	}*/
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -15,15 +10,6 @@ export class Message extends React.Component {
 		};
 	}
 	componentDidMount() {
-		/*$.get(this.props.source, function(result) {
-		  var lastGist = result[0];
-		  if (this.isMounted()) {
-		    this.setState({
-		      username: lastGist.owner.login,
-		      lastGistUrl: lastGist.html_url
-		    });
-		  }
-		}.bind(this));*/
 		this.getData({
 			"attr": "url"
 		})
@@ -60,6 +46,13 @@ export class About extends React.Component {
 }
 
 
-
-// export default Message
-// export class About
+export class Inbox extends React.Component {
+	render() {
+		return (
+			<div>
+        <h2>Inbox</h2>
+        {this.props.children || "Welcome to your Inbox"}
+      </div>
+		)
+	}
+}

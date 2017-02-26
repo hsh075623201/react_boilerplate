@@ -1,43 +1,43 @@
 //路由控制
-var Router = require('react-router');
-var Route = Router.Route;
-
-var About = React.createClass({
-	render: function() {
-		return <h2>about</h2>;
-	}
-});
-
-var Home = React.createClass({
-	render: function() {
-		return <h2>Home</h2>;
-	}
-});
+import React from 'react'
+import {
+	Route
+} from 'react-router'
+import {
+	Message,
+	About,
+	Inbox
+} from '../components/component.js'
+import App from '../App.js'
 
 
-var App = React.createClass({
-	render() {
-		return (
+const routes = <Route path="/" component={App}>
+      <Route path="about" component={About} />
+      <Route path="inbox" component={Inbox}>
+        <Route path="messages/:id" component={Message} />
+      </Route>
+    </Route>
 
-			<div className="mp_wrap bui_wrap">
-			{/**主屏幕**/}
-			<div className="mp_pagebox_home">
-				
-				{/**这里面的内容会被子路由给代替**/}
-				{this.props.children}
+/*const routes = {
+  path: '/',
+  indexRoute: {
+    getComponent(nextState, cb) {
+      require.ensure([], (require) => {
+        cb(null, require(App))
+      }, 'HomePage')
+    },
+  },
+	getComponent(nextState, cb) {
+	  require.ensure([], (require) => {
+	    cb(null, require('components/Main'))
+	  }, 'Main')
+	},
+	childRoutes: [
+	  require('./routes/baidu'),
+	  require('./routes/404'),
+	  require('./routes/redirect')
+	]
+}*/
 
-				{/**公共页脚**/}
-				<div className="mp_page_footer">
-					 <Footer  />
-				</div>
-				{/**公共页脚**/}
-			</div>
-			{/**主屏幕**/}
-		</div>
-		)
-	}
-});
 
-
-
-module.exports = App
+export default routes

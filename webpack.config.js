@@ -13,7 +13,9 @@ var config = {
   ], //入口文件
   output: {
     path: path.resolve(__dirname, 'dist'), // 指定编译后的代码位置为 dist/bundle.js
-    filename: '/bundle.js'
+    filename: '/bundle.js',
+    // 添加 chunkFilename
+    chunkFilename: '[name].[chunkhash:5].chunk.js',
   },
   devtool: 'source-map',
   module: {
