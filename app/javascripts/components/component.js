@@ -51,7 +51,7 @@ export class Inbox extends React.Component {
 		return (
 			<div>
         <h2>Inbox</h2>
-        {this.props.children || "Welcome to your Inbox"}
+        {this.props.children || "Welcome to your Inbox！"}
       </div>
 		)
 	}

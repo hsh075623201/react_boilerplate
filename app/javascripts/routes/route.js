@@ -1,7 +1,8 @@
 //路由控制
 import React from 'react'
 import {
-	Route
+	Route,
+	Redirect
 } from 'react-router'
 import {
 	Message,
@@ -16,8 +17,10 @@ const routes = <Route path="/" component={App}>
       <Route path="inbox" component={Inbox}>
         <Route path="messages/:id" component={Message} />
       </Route>
+      <Redirect to="/inbox" />
     </Route>
 
+// todo list 按需加载
 /*const routes = {
   path: '/',
   indexRoute: {
