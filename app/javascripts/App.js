@@ -3,7 +3,7 @@ import React from 'react'
 import {
     Link
 } from 'react-router'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './Header.js'
 import Footer from './Footer.js'
 import NavLink from './Nav/NavLink.js'
