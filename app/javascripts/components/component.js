@@ -5,7 +5,7 @@ import {
 	Button
 } from 'react-bootstrap';
 
-import 'bootstrap/dist/css/bootstrap.css'
+
 
 export class Message extends React.Component {
 	constructor(props) {
@@ -46,7 +46,7 @@ export class About extends React.Component {
 		super(props)
 	}
 	render() {
-		return <Button bsStyle="primary">About</Button>
+		return <Button bsStyle="primary">bootstrap Button</Button>
 	}
 }
 

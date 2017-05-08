@@ -5,7 +5,7 @@ import fetch from 'node-fetch'
 class Footer extends React.Component {
 	render() {
 		console.log("Footer...")
-		return <div ><h3>Footer Content.....</h3></div>
+		return <div style={{height:'60px',backgroundColor:'red'}}><h3>Footer Content.....</h3></div>
 	}
 }
 export default Footer

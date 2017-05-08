@@ -9,6 +9,7 @@ var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var config = {
   entry: {
     data: [
+      'react-hot-loader/patch',
       'webpack-dev-server/client?http://localhost:3000', // WebpackDevServer host and port
       'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
       './app/index.js'
@@ -22,6 +23,16 @@ var config = {
 
     // 添加 chunkFilename
     chunkFilename: '[name].[chunkhash:5].chunk.js',
+  },
+  devServer: {
+    host: "0.0.0.0",
+    port: 3000,
+    contentBase: path.resolve(__dirname, 'dist'),
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    //color: true,
+    //progress: true
   },
   devtool: 'source-map',
   module: {
@@ -67,6 +78,9 @@ var config = {
       inject: 'body'
     }),
     new UglifyJsPlugin({
+      sourceMap: true
+    }),
+    new webpack.LoaderOptionsPlugin({
       minimize: true
     }),
     new ExtractTextPlugin("css/[name]_[hash:8].css"),
