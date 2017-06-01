@@ -1,9 +1,6 @@
 // 组建模块
 import React from 'react'
 import fetch from 'node-fetch';
-import {
-	Button
-} from 'react-bootstrap';
 
 
 
@@ -44,9 +41,10 @@ export class Message extends React.Component {
 export class About extends React.Component {
 	constructor(props) {
 		super(props)
+		console.log("About cmponent...")
 	}
 	render() {
-		return <Button bsStyle="primary">bootstrap Button</Button>
+		return <div>bootstrap Button</div>
 	}
 }
 

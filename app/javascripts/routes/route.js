@@ -20,27 +20,6 @@ const routes = <Route path="/" component={App}>
       <Redirect to="/inbox" />
     </Route>
 
-// todo list 按需加载
-/*const routes = {
-  path: '/',
-  indexRoute: {
-    getComponent(nextState, cb) {
-      require.ensure([], (require) => {
-        cb(null, require(App))
-      }, 'HomePage')
-    },
-  },
-	getComponent(nextState, cb) {
-	  require.ensure([], (require) => {
-	    cb(null, require('components/Main'))
-	  }, 'Main')
-	},
-	childRoutes: [
-	  require('./routes/baidu'),
-	  require('./routes/404'),
-	  require('./routes/redirect')
-	]
-}*/
 
 
 export default routes

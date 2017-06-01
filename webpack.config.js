@@ -53,11 +53,19 @@ var config = {
         loader: 'file-loader'
       }, {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
           // css modules
 
           use: "css-loader?modules&localIdentName=[name]_[local]-[hash:base64:5]"
+        })
+      }, {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          // css modules
+          use: "css-loader"
         })
       }, {
         test: /\.less$/,
