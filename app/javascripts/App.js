@@ -46,7 +46,7 @@ class App extends Component {
             />
           </Header>
     <Layout className="ant-layout-has-sider">
-      <SiderMenu collapsed={this.state.collapsed}/>
+      <SiderMenu collapsed={this.state.collapsed} path={this.props.location.pathname}/>
       <Layout >
         
    

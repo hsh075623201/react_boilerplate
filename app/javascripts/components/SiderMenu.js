@@ -16,16 +16,13 @@ const {
   Sider
 } = Layout;
 const PubSub = require('pubsub-js');
-//import styles from '../../css/index.css'
+import styles from '../../css/index.css'
 
 class SiderMenu extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      openKey: 'sub1',
-      selectedKey: '/about'
-    };
+    this.state = {};
 
   }
 
@@ -37,30 +34,35 @@ class SiderMenu extends React.Component {
   componentDidMount = () => {
 
     this.pubsub_token = PubSub.subscribe('siderCollapsed', function(topic, collapsed) {
-      console.log("collapsed####")
-      console.log(collapsed)
       this.setState({
         collapsed: !collapsed
       });
+      if (!collapsed) {
+        this.setState({
+          openKey: ""
+        })
+      }
     }.bind(this));
+    const _path = this.props.path
+    this.setState({
+      openKey: _path.substr(0, _path.lastIndexOf('/')),
+      selectedKey: _path
+    });
 
   }
 
 
-  onOpenChange = (openKeys) => {
+  onOpenChange = (openKey) => {
     const state = this.state;
-    console.log(state)
-      /*const latestOpenKey = openKeys.find(key => !(state.openKeys.indexOf(key) > -1));
-      const latestCloseKey = state.openKeys.find(key => !(openKeys.indexOf(key) > -1));
 
-      let nextOpenKeys = [];
-      if (latestOpenKey) {
-        nextOpenKeys = this.getAncestorKeys(latestOpenKey).concat(latestOpenKey);
-      }
-      if (latestCloseKey) {
-        nextOpenKeys = this.getAncestorKeys(latestCloseKey);
-      }
-      this.setState({ openKeys: nextOpenKeys });*/
+    this.setState({
+      openKey: openKey.pop()
+    })
+  }
+  handleClick = (obj) => {
+    this.setState({
+      selectedKey: obj.key
+    })
   }
 
   render() {
@@ -72,18 +74,20 @@ class SiderMenu extends React.Component {
         <Menu
           mode="inline"
           theme="dark"
-          defaultSelectedKeys={[this.state.selectedKey]}
-          defaultOpenKeys={[this.state.openKey]}
+          selectedKeys={[this.state.selectedKey]}
+          openKeys={[this.state.openKey]}
           style={{ height: '100%' }}
+          onOpenChange={this.onOpenChange}
+          onClick={this.handleClick}
         >
-          <SubMenu key="sub1" title={<span><Icon type="user" />subnav 1</span>}>
-            <Menu.Item key="/about"><NavLink to={"/about"}>about</NavLink></Menu.Item>
-            <Menu.Item key="/inbox"><NavLink to={"/inbox"}>inbox</NavLink></Menu.Item>
+          <SubMenu key="/sub1" title={<span><Icon type="user" />subnav 1</span>}>
+            <Menu.Item key="/sub1/about"><NavLink to={"/sub1/about"}>about</NavLink></Menu.Item>
+            <Menu.Item key="/sub1/inbox"><NavLink to={"/sub1/inbox"}>inbox</NavLink></Menu.Item>
             <Menu.Item key="3">option3</Menu.Item>
             <Menu.Item key="4">option4</Menu.Item>
           </SubMenu>
-          <SubMenu key="sub2" title={<span><Icon type="laptop" />subnav 2</span>}>
-            <Menu.Item key="5">option5</Menu.Item>
+          <SubMenu key="/sub2" title={<span><Icon type="laptop" />subnav 2</span>}>
+            <Menu.Item key="/sub2/messages/1"><NavLink to={"/sub2/messages/1"}> message</NavLink></Menu.Item>
             <Menu.Item key="6">option6</Menu.Item>
             <Menu.Item key="7">option7</Menu.Item>
             <Menu.Item key="8">option8</Menu.Item>
