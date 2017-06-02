@@ -50,8 +50,7 @@ class App extends Component {
               onClick={this.toggle}
               style={{fontSize:'16px',cursor:'pointer',padding:'0px 16px',margin:0}}
             />
-            <Menu
-                    mode="horizontal"
+            <Menu mode = "horizontal"
                     style={{ lineHeight: '64px', float: 'right' }}
                 >
     {
