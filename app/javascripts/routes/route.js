@@ -7,7 +7,9 @@ import {
 import {
   Message,
   About,
-  Inbox
+  Inbox,
+  Setting,
+  User
 } from '../components/component.js'
 import App from '../App.js'
 
@@ -20,6 +22,9 @@ const routes = <Route path="/" component={App}>
       <Route path="sub2">
         <Route path="messages/:id" component={Message} />
       </Route>
+      <Route path="setting" component={Setting} />
+      <Route path="user" component={User} />
+
     </Route>
 
 

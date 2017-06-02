@@ -59,3 +59,23 @@ export class Inbox extends React.Component {
 		)
 	}
 }
+
+export class Setting extends React.Component {
+	render() {
+		return (
+			<div>
+        <h2>Setting</h2>
+      </div>
+		)
+	}
+}
+
+export class User extends React.Component {
+	render() {
+		return (
+			<div>
+        <h2>User</h2>
+      </div>
+		)
+	}
+}
