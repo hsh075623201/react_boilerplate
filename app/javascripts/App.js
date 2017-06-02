@@ -2,37 +2,64 @@ import React, {
   Component
 } from 'react';
 import {
-  Layout
+  Layout,
+  Breadcrumb,
+  Menu,
+  Icon
 } from 'antd';
 const {
   Content,
-  Footer
+  Footer,
+  Header
 } = Layout;
 import SiderMenu from './components/SiderMenu';
+const PubSub = require('pubsub-js');
+import styles from '../css/index.css'
 
 class App extends Component {
-  state = {
-    collapsed: false,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapsed: false,
+    };
+
+  }
+
   toggle = () => {
     this.setState({
       collapsed: !this.state.collapsed,
     });
+    PubSub.publish('siderCollapsed', this.state.collapsed);
   };
   render() {
     return (
-      <Layout className="ant-layout-has-sider">
-              <SiderMenu path={this.props.location.pathname} collapsed={this.state.collapsed} />
-              <Layout>
-                <Content style={{ margin: '0 16px', overflow: 'initial' }}>
-                  {this.props.children}
-                </Content>
-                <Footer style={{ textAlign: 'center' }}>
-                  React-Boilerplate ©2017 Created by hank
-                </Footer>
-              </Layout>
-            </Layout>
-    );
+      <Layout>
+    <Header style={{ background:'#fff', padding: 0 }}>
+    <div style={{float:'left',textAlign:'center'}} className={styles.siderWidth}>
+      <h3 style={{fontSize:'24px',fontWeight:'bold'}}>后台管理系统</h3>
+    </div>
+            <Icon
+              className="trigger"
+              type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
+              onClick={this.toggle}
+              style={{fontSize:'16px',cursor:'pointer',padding:'0px 16px',margin:0}}
+            />
+          </Header>
+    <Layout className="ant-layout-has-sider">
+      <SiderMenu collapsed={this.state.collapsed}/>
+      <Layout >
+        
+   
+        <Content style={{ background: '#fff', padding: 24, margin: '24px 16px', minHeight: 280 }}>
+          {this.props.children}
+        </Content>
+        <Footer style={{ textAlign: 'center' }}>
+      react-boilerplate ©2017 Created by hank
+    </Footer>
+      </Layout>
+    </Layout>
+  </Layout>
+    )
   }
 }
 

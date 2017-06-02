@@ -10,3 +10,7 @@
 :global(.active){
 	color:blue !important;
 }
+
+.siderWidth{
+	width: 240px
+}

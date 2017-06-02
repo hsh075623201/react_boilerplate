@@ -62,6 +62,7 @@ var config = {
         })
       }, {
         test: /\.css$/,
+        include: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
           // css modules
